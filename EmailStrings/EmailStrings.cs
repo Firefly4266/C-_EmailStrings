@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Web.RegularExpressions;
+using System.Text.RegularExpressions;
 
 public class EmailStrings
 {
@@ -29,15 +29,18 @@ public class EmailStrings
                         }
                         else
                             Console.WriteLine("user and domaim must be alpha numeric");
+                        break;
                     }
                     else
                         Console.WriteLine("{0}, {1}, and {2} are the only leagal suffixes.", "com", "org", "edu" );
+                    break;
                 }
                 else
                     Console.WriteLine("Missing '.', address invalid.");
             }
             else
                 Console.WriteLine("Missing '@', address invalid.");
+            break;
         }
         Console.WriteLine("Enter string, enter to exit.  ");
         email = iw.getString("email: ");
@@ -46,7 +49,7 @@ public class EmailStrings
 
     private static bool isAlphaNum(String domain)
     {
-        RegularExpression testPattern = new RegularExpression("^[a-zA-Z0-9]*$");
-        return domain.IsMatch(testPattern);
+        Regex testPattern = new Regex("^[a-zA-Z0-9]*$");
+        return testPattern.IsMatch(domain);
     }
 }
