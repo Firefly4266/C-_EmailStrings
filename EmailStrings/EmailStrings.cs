@@ -49,32 +49,3 @@ public class EmailStrings
         return domain.IsMatch(testPattern);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            //elements = email.Split(spaces);
-            //foreach (string ele in elements)
-            //{
-            //    Console.WriteLine(ele);
-            //}
