@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web.RegularExpressions;
 
 public class EmailStrings
 {
@@ -45,7 +46,7 @@ public class EmailStrings
 
     private static bool isAlphaNum(String domain)
     {
-        Regex testPattern = new RegularExpression("^[a-zA-Z0-9]*$");
+        RegularExpression testPattern = new RegularExpression("^[a-zA-Z0-9]*$");
         return domain.IsMatch(testPattern);
     }
 }
